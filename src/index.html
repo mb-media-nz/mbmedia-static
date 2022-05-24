@@ -1,47 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MB Media</title>
+    <title>MB Media - Web Development</title>
     <link rel="stylesheet" href="./style.css" type="text/css" />
   </head>
   <body>
 
-    <!-- Home -->
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<!-- Navbar -->
+<section class="relative w-full px-8 text-gray-700 bg-white body-font">
+  <div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
+      <a href="#_" class="relative z-10 flex items-center w-auto text-2xl font-extrabold leading-none text-black select-none"><span class="text-indigo-600 mr-1">&lt;/&gt;</span>MB Media</a>
+
+      <nav class="top-0 left-0 z-0 flex items-center justify-end w-full h-full py-5 -ml-0 space-x-5 text-base md:-ml-5 md:py-0 md:absolute container">
+          <a href="#_" class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+              <span class="block">Home</span>
+              <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden">
+                  <span x-show="hover" class="absolute inset-0 inline-block w-full h-1 h-full transform bg-gray-900" x-transition:enter="transition ease duration-200" x-transition:enter-start="scale-0" x-transition:enter-end="scale-100" x-transition:leave="transition ease-out duration-300" x-transition:leave-start="scale-100" x-transition:leave-end="scale-0"></span>
+              </span>
+          </a>
+          <a href="#_" class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+              <span class="block">Features</span>
+              <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden">
+                  <span x-show="hover" class="absolute inset-0 inline-block w-full h-1 h-full transform bg-gray-900" x-transition:enter="transition ease duration-200" x-transition:enter-start="scale-0" x-transition:enter-end="scale-100" x-transition:leave="transition ease-out duration-300" x-transition:leave-start="scale-100" x-transition:leave-end="scale-0"></span>
+              </span>
+          </a>
+          <a href="#_" class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+              <span class="block">Pricing</span>
+              <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden">
+                  <span x-show="hover" class="absolute inset-0 inline-block w-full h-1 h-full transform bg-gray-900" x-transition:enter="transition ease duration-200" x-transition:enter-start="scale-0" x-transition:enter-end="scale-100" x-transition:leave="transition ease-out duration-300" x-transition:leave-start="scale-100" x-transition:leave-end="scale-0"></span>
+              </span>
+          </a>
+          <a href="#_" class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+              <span class="block">Blog</span>
+              <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden">
+                  <span x-show="hover" class="absolute inset-0 inline-block w-full h-1 h-full transform bg-gray-900" x-transition:enter="transition ease duration-200" x-transition:enter-start="scale-0" x-transition:enter-end="scale-100" x-transition:leave="transition ease-out duration-300" x-transition:leave-start="scale-100" x-transition:leave-end="scale-0"></span>
+              </span>
+          </a>
       </nav>
+  </div>
+</section>
+
+<!-- Hero -->
+<section class="px-2 md:py-32 bg-white md:px-0">
+<div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
+  <div class="flex flex-wrap items-center sm:-mx-3">
+    <div class="w-full py-8 md:w-1/2 md:px-6">
+      <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0 mx-auto">
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 text-center sm:text-5xl md:text-left md:text-4xl lg:text-5xl xl:text-6xl">
+          <span class="inline">Your creative</span>
+          <span class="inline text-indigo-600">web</span>
+          <span class="inline xl:inline">and</span>
+          <span class=" text-indigo-600">mobile</span>
+          <span class="">partner!</span>
+        </h1>
+        <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">Bring your company into 2022 with MB Media – modern business media design and development based in Christchurch, NZ.</p>
+        <div class="relative flex flex-col sm:flex-row sm:space-x-4">
+          <a href="#about" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+            What we do
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 pb-8">
+      <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+          <img src="./img/profile.webp">
+        </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Logos -->
+<section class="bg-gray-100">
+  <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <img class="w-full object-contain" src="./img/logo_1.webp" alt="">
+          </div>
+          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <img class="w-full object-contain" src="./img/logo_2.webp" alt="">
+          </div>
+          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <img class="w-full object-contain" src="./img/logo_3.webp" alt="">
+          </div>
+          <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+            <img class="w-full object-contain" src="./img/logo_4.webp" alt="">
+          </div>
+          <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+            <img class="w-full object-contain" src="./img/logo_5.webp" alt="">
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 bg-gray-50">
+<div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
+  <div class="flex flex-wrap items-center -mx-3">
+    <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img class="mx-auto sm:max-w-sm lg:max-w-full" src="./img/dev-process.png" alt="feature image"></div>
+    <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
+      <div class="w-full lg:max-w-md">
+        <h2 class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">Up-to-date methods</h2>
+        <p class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">With broad experience in the technology and media industry, we can help your business succeed.</p>
+        <ul>
+          <li class="flex items-center py-2 space-x-4 xl:py-3">
+            <svg class="w-8 h-8 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+            <span class="font-medium text-gray-500">Modern tools for fast page loading</span>
+          </li>
+          <li class="flex items-center py-2 space-x-4 xl:py-3">
+            <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            <span class="font-medium text-gray-500">Extensive experience in a variety of tech</span>
+          </li>
+          <li class="flex items-center py-2 space-x-4 xl:py-3">
+            <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <span class="font-medium text-gray-500">Top level protection and security</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</section>
+
+<!-- Features -->
+<section class="py-20 bg-white">
+  <div class="container max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold tracking-tight text-center">Our Services</h2>
+      <p class="mt-2 text-lg text-center text-gray-600">See what MB Media can do for you.</p>
+      <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
+
+          <div class="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
+              <div class="p-3 text-white bg-blue-500 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-white w-6 h-6" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M528 0h-480C21.5 0 0 21.5 0 48v320C0 394.5 21.5 416 48 416h192L224 464H152C138.8 464 128 474.8 128 488S138.8 512 152 512h272c13.25 0 24-10.75 24-24s-10.75-24-24-24H352L336 416h192c26.5 0 48-21.5 48-48v-320C576 21.5 554.5 0 528 0zM512 288H64V64h448V288z"/></svg>
+              </div>
+              <h4 class="text-xl font-medium text-gray-700">Websites & hosting
+              </h4>
+              <p class="text-base text-center text-gray-500">Offering the full website development process from design to deployment, we can suggest the most effective solution for your needs.</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+              <div class="p-3 text-white bg-blue-500 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-white w-6 h-6" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>
+              </div>
+              <h4 class="text-xl font-medium text-gray-700">eCommerce</h4>
+              <p class="text-base text-center text-gray-500">We have experience in Shopify, Woocommerce and Joomla, and can help set up your online store, providing shipping solutions and payment options.</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+              <div class="p-3 text-white bg-blue-500 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-white w-6 h-6" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"/></svg>
+              </div>
+              <h4 class="text-xl font-medium text-gray-700">Blockchain integration</h4>
+              <p class="text-base text-center text-gray-500">From dApp development to smart contracts, we can build your Ethereum infrastructure for Web 3.0.</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+              <div class="p-3 text-white bg-blue-500 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-white w-6 h-6" viewBox="0 0 488 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+              </div>
+              <h4 class="text-xl font-medium text-gray-700">SEO optimisation</h4>
+              <p class="text-base text-center text-gray-500">Our website packages includes SEO optimisation but we can help with your existing site to analyse and implement areas of improvement.</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+              <div class="p-3 text-white bg-blue-500 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-white w-6 h-6" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M448 64H192C85.96 64 0 149.1 0 256s85.96 192 192 192h256c106 0 192-85.96 192-192S554 64 448 64zM247.1 280h-32v32c0 13.2-10.78 24-23.98 24c-13.2 0-24.02-10.8-24.02-24v-32L136 279.1C122.8 279.1 111.1 269.2 111.1 256c0-13.2 10.85-24.01 24.05-24.01L167.1 232v-32c0-13.2 10.82-24 24.02-24c13.2 0 23.98 10.8 23.98 24v32h32c13.2 0 24.02 10.8 24.02 24C271.1 269.2 261.2 280 247.1 280zM431.1 344c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40s39.1 17.88 39.1 40S454.1 344 431.1 344zM495.1 248c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40c22.12 0 39.1 17.88 39.1 40S518.1 248 495.1 248z"/></svg>
+              </div>
+              <h4 class="text-xl font-medium text-gray-700">Gamification</h4>
+              <p class="text-base text-center text-gray-500">A fast-growing industry, bringing gameplay into your brand can help customer engagement and awareness.</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+              <div class="p-3 text-white bg-blue-500 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="fill-white w-6 h-6" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M320 0H64C37.5 0 16 21.5 16 48v416C16 490.5 37.5 512 64 512h256c26.5 0 48-21.5 48-48v-416C368 21.5 346.5 0 320 0zM240 447.1C240 456.8 232.8 464 224 464H159.1C151.2 464 144 456.8 144 448S151.2 432 160 432h64C232.8 432 240 439.2 240 447.1zM304 384h-224V64h224V384z"/></svg>
+              </div>
+              <h4 class="text-xl font-medium text-gray-700">App development
+              </h4>
+              <p class="text-base text-center text-gray-500">Do you require a bespoke app for your customers or staff? We can design and create apps for online browsers, and Android and iOS platforms.</p>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="flex items-center justify-center py-20 bg-white min-w-screen">
+  <div class="px-16 bg-white">
+      <div class="container flex flex-col items-start mx-auto lg:items-center">
+          <p class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">Don't just take our word for it</p>
 
 
-    </header>
+          <h2 class="relative flex items-start justify-start w-full max-w-3xl text-5xl font-bold lg:justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="absolute right-0 hidden w-12 h-12 -mt-2 -mr-16 text-gray-200 lg:inline-block" viewBox="0 0 975.036 975.036">
+              <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+              </path>
+          </svg>
+              See what others are saying</h2>
+              <div class="block w-full h-0.5 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
 
-    <main>
+          <div class="items-baseline justify-center w-full mt-12 mb-4 lg:flex">
+              <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0">
+                  <div class="flex items-center justify-center">
+                      <div class="flex flex-col items-start justify-center">
+                          <h4 class="font-bold text-gray-800">Sam Morton</h4>
+                          <p class="text-gray-600">Creative Woodcraft</p>
+                      </div>
+                  </div>
+                  <blockquote class="mt-8 text-lg text-gray-500">"Mytch's passion comes through in the finished product and we have no hesitation in recommending MB Media to any business wanting to make a mark visually."</blockquote>
+              </div>
+              <div class="flex flex-col items-start justify-start w-full h-auto px-0 mx-0 mb-12 border-l border-r border-transparent lg:w-1/3 lg:mb-0 lg:px-8 lg:mx-8 lg:border-gray-200">
+                  <div class="flex items-center justify-center">
+                      <div class="flex flex-col items-start justify-center">
+                          <h4 class="font-bold text-gray-800">Rory Foley</h4>
+                          <p class="text-gray-600">Fear NZ</p>
+                      </div>
+                  </div>
+                  <blockquote class="mt-8 text-lg text-gray-500">"We used MB Media to help us with mobile app sign in technology. Mytchall was forward thinking, ever so polite and gave new ideas we didn’t think about. We look forward to working with MB Media again."</blockquote>
+              </div>
+              <div class="flex flex-col items-start justify-start w-full h-auto lg:w-1/3">
+                  <div class="flex items-center justify-center">
+                      <div class="flex flex-col items-start justify-center">
+                          <h4 class="font-bold text-gray-800">Stephen Allington</h4>
+                          <p class="text-gray-600">NZ Petfoods</p>
+                      </div>
+                  </div>
+                  <blockquote class="mt-8 text-lg text-gray-500">"Mytchall helped us with shifting our old eCommerce site to Shopify. We found him easy to work with and he explained the technical stuff in sample English. Ours was not a sample transfer with our complex freight options. I would recommend him to others."</blockquote>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
-      <!-- Services -->
-      <div></div>
+<!-- Featured work -->
+<section class="bg-white">
+  <div class="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
 
-      <!-- Featured Works -->
-      <div></div>
+      <div class="flex flex-col items-center sm:px-5 md:flex-row">
+          <div class="w-full md:w-1/2">
+              <a href="https://mountainviewvillage.co.nz/" target="_blank" class="block">
+                  <img class="object-cover w-full h-full rounded-lg max-h-64 sm:max-h-96" src="./img/web-example-mvv.webp">
+              </a>
+          </div>
+          <div class="flex flex-col items-start justify-center w-full h-full py-6 mb-6 md:mb-0 md:w-1/2">
+              <div class="flex flex-col items-start justify-center h-full space-y-3 transform md:pl-10 lg:pl-16 md:space-y-5">
+                  <div class="bg-pink-500 flex items-center pl-2 pr-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
+                      <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                      <span>Featured work</span>
+                  </div>
+                  <h1 class="text-4xl font-bold leading-none lg:text-5xl xl:text-6xl">Mountain View Village</h1>
+                  <p class="pt-2 text-sm font-medium"><span class="mx-1 text-gray-600">Website rebuild focusing on simplicity and ease of use.</span></p>
+              </div>
+          </div>
+      </div>
 
-      <!-- Why Choose Us -->
+      <div class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+              <a href="https://fishindserv.co.nz/" target="_blank" class="block">
+                  <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="./img/web-example-fish.jpg">
+              </a>
+              <div class="bg-purple-500 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
+                  <span>E-Commerce</span>
+              </div>
+              <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Fishindserv.co.nz</h2>
+              <p class="text-sm text-gray-500">A WooCommerce shop with custom Wordpress theme.</p>
+              
+          </div>
 
-      <!-- Stats -->
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+              <a href="https://washingtons.co.nz/" target="_blank" class="block">
+                  <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="./img/web-example-washingtons.jpg">
+              </a>
+              <div class="bg-pink-500 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
+                  <span>Industrial</span>
+              </div>
+              <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Washingtons.co.nz</h2>
+              <p class="text-sm text-gray-500">Refresh of an existing site bringing in a modern design including video.</p>
+          </div>
 
-      <!-- Testimonials -->
+          <div class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
+              <a href="https://chimneyservices.co.nz/" target="_blank" class="block">
+                  <img class="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56" src="./img/web-example-chimney.jpg">
+              </a>
+              <div class="bg-red-500 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
+                  <span>Local Business</span>
+              </div>
+              <h2 class="text-lg font-bold sm:text-xl md:text-2xl">Chimneyservices.co.nz</h2>
+              <p class="text-sm text-gray-500">Showcase of services provided by a local chimney service business.</p>
+          </div>
+      </div>
+  </div>
+</section>
 
-      <!-- Contact Us -->
+<!-- Contact -->
+<section id="contact" class="py-20 bg-white">
+  <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl xl:text-6xl">
+          Get in touch
+      </h2>
+      <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+        Flick us an email to discuss your project and how we can help.
+      </p>
+      <div class="flex justify-center mt-8 space-x-3">
+          <a href="mailto:contact@mbmedia.co.nz" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow hover:bg-indigo-700">Email</a>
+      </div>
+  </div>
+</section>
 
-    </main>
+<!-- Footer -->
+<section class="text-gray-700 bg-white body-font">
+  <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
+      <a href="#_" class="text-xl font-black leading-none text-gray-900 select-none logo"><span class="text-indigo-600">&lt;/&gt;</span> MB Media</a>
+      <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2022 MB Media, New Zealand
+          <span class="text-gray-400 text-xs">| Some images from <a rel="noreferrer" href="https://freepik.com">Freepik.com</a></span>
+      </p>
+      <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
+          <a target="_blank" href="https://www.facebook.com/mbmediawebsites" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">Facebook</span>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+              </svg>
+          </a>
 
-    <!-- Footer -->
-    <Footer></Footer>
+          <a href="https://github.com/mytchallb" target="_blank" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">GitHub</span>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+              </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/mytchall-bransgrove-8352a3118/" target="_blank" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="w-6 h-6" fill="currentColor"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="64px" height="64px"><path d="M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z M25,44h-5V26h5V44z M22.485,24h-0.028C20.965,24,20,22.888,20,21.499C20,20.08,20.995,19,22.514,19c1.521,0,2.458,1.08,2.486,2.499 C25,22.887,24.035,24,22.485,24z M44,44h-5v-9c0-3-1.446-4-3-4c-1.445,0-3,1-3,4v9h-5V26h5v3c0.343-0.981,1.984-3,5-3c4,0,6,3,6,8 V44z"/></svg>
+          </a>
+      </span>
+  </div>
+</section>
+
 
 
 
