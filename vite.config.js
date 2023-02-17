@@ -1,3 +1,4 @@
+
 import compress from 'vite-plugin-compress'
 
 
@@ -11,7 +12,8 @@ module.exports = {
         makeAbsoluteExternalsRelative: true
       }
     },
+    /*
     plugins: [
       compress(),
-    ]
+    ]*/
 }
